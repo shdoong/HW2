@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      
+      <form action = "http://localhost:5000/album_result" method = "POST">
+        {{ form.hidden_tag() }}
+
+       {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
+            
+         <fieldset>
+           	{{form.albumname.label}} {{form.albumname}} <br>
+      			{{form.alb_like.label}}} <br>
+      			{{form.alb_like}}
+           <br>
+            {{form.submit }}
+            
+         </fieldset>
+      </form>
+      
+   </body>
+</html>
