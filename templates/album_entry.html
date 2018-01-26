@@ -8,15 +8,13 @@
        {% for message in get_flashed_messages() %}
             {{ message }}
             {% endfor %}
-            
-         <fieldset>
+        <br>
            	{{form.albumname.label}} {{form.albumname}} <br>
       			{{form.alb_like.label}}} <br>
       			{{form.alb_like}}
            <br>
             {{form.submit }}
             
-         </fieldset>
       </form>
       
    </body>
