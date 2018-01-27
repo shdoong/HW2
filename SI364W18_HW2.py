@@ -80,7 +80,7 @@ def album_entry():
 @app.route('/album_result', methods = ['GET', 'POST'])
 def album_result():
     form = AlbumEntryForm(request.form)
-    if request.method == "POST" and form.validate_on_submit():
+    if form.validate_on_submit():
 	    alb_name = request.form['albumname']
 	    likes = request.form['alb_like']
 	    return render_template('album_data.html', alb_name = alb_name, rating = likes)
